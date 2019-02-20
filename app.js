@@ -93,7 +93,7 @@ function updateToolTip(chosenxAxis, circlesGroup) {
     return circlesGroup
   }
 
-// Retrieve data from the CSV file and execute everything below
+// Load CSV file and run lines below
 d3.csv("data.csv", function (error, data) {
     if (error) throw error;
   
@@ -135,7 +135,7 @@ d3.csv("data.csv", function (error, data) {
       .attr("cx", d => xLinearScale(d[chosenxAxis]))
       .attr("cy", d => yLinearScale(d[chosenyAxis]))
       .attr("r", 9)
-      .attr("fill", "pink")
+      .attr("fill", "blue")
       .attr("opacity", "0.8")
       .attr("class", "stateText");
     
